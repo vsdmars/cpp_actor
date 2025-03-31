@@ -1,5 +1,5 @@
 # specify the C++ standard
-SET(CMAKE_CXX_STANDARD 17)
+SET(CMAKE_CXX_STANDARD 20)
 SET(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # debugging purpose, should be removed in production
@@ -38,3 +38,8 @@ SET(CMAKE_INSTALL_RPATH_USE_LINK_PATH FALSE)
 
 # extra compile options
 # target_compile_options(${SCALE_LRUCACHE_BENCH} PRIVATE -O3 -Wall -Wconversion -Wdouble-promotion -Weffc++ -Wextra -Wfloat-equal -Wformat=2 -Wno-error=unused-variable -Wnull-dereference -Wold-style-cast -Wpedantic -Wshadow -Wuninitialized -Wunreachable-code -Wredundant-move -Wpessimizing-move -Wthread-safety)
+
+target_compile_options(
+    vsdmars PRIVATE
+    $<$<COMPILE_LANG_AND_ID:CXX,Clang,GNU>:-Werror=return-type>
+)

@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 4.00)
 
 
 # enable unit test
@@ -9,7 +9,7 @@ enable_testing()
 include("cmakeFiles/version.cmake")
 
 # set the project name / version
-project(LRU_Cache VERSION ${LRUC_VERSION} LANGUAGES CXX)
+project(CPP_ACTOR VERSION ${CPP_ACTOR_VERSION} LANGUAGES CXX)
 
 # unit test and benchmark binary
 add_subdirectory(test)
