@@ -1,0 +1,7 @@
+-std=c++17
+-I/usr/include/c++/10
+-I/usr/include
+-Iinclude
+-Wall
+-O3
+-Wthread-safety
