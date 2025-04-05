@@ -40,6 +40,6 @@ SET(CMAKE_INSTALL_RPATH_USE_LINK_PATH FALSE)
 # target_compile_options(${SCALE_LRUCACHE_BENCH} PRIVATE -O3 -Wall -Wconversion -Wdouble-promotion -Weffc++ -Wextra -Wfloat-equal -Wformat=2 -Wno-error=unused-variable -Wnull-dereference -Wold-style-cast -Wpedantic -Wshadow -Wuninitialized -Wunreachable-code -Wredundant-move -Wpessimizing-move -Wthread-safety)
 
 target_compile_options(
-    vsdmars PRIVATE
+    cppactor PRIVATE
     $<$<COMPILE_LANG_AND_ID:CXX,Clang,GNU>:-Werror=return-type>
 )

@@ -1,0 +1,4 @@
+/Users/vsdmars/files/projects/cpp_actor/build/CMakeFiles/cppactor.dir
+/Users/vsdmars/files/projects/cpp_actor/build/CMakeFiles/test.dir
+/Users/vsdmars/files/projects/cpp_actor/build/CMakeFiles/edit_cache.dir
+/Users/vsdmars/files/projects/cpp_actor/build/CMakeFiles/rebuild_cache.dir
