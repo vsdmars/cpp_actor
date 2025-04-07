@@ -6,3 +6,4 @@
 -Wall
 -O3
 -Wthread-safety
+-fexperimental-library

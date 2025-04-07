@@ -1,6 +1,7 @@
 # specify the C++ standard
-SET(CMAKE_CXX_STANDARD 20)
-SET(CMAKE_CXX_STANDARD_REQUIRED True)
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+set(CMAKE_CXX_EXTENSIONS True)
 
 # debugging purpose, should be removed in production
 # https://stackoverflow.com/a/7032021
@@ -12,9 +13,11 @@ set(CMAKE_CXX_COMPILER "clang++")
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # RPATH setup
-SET(CMAKE_SKIP_BUILD_RPATH  FALSE)
-SET(CMAKE_BUILD_WITH_INSTALL_RPATH FALSE)
-SET(CMAKE_INSTALL_RPATH_USE_LINK_PATH FALSE)
+set(CMAKE_SKIP_BUILD_RPATH  FALSE)
+set(CMAKE_BUILD_WITH_INSTALL_RPATH FALSE)
+set(CMAKE_INSTALL_RPATH_USE_LINK_PATH FALSE)
+
+add_compile_options(-Wall -Wextra -Werror=return-type -O2 -fexperimental-library)
 
 # compile with C++ 17 features
 # https://cmake.org/cmake/help/latest/manual/cmake-compile-features.7.html#requiring-language-standards
@@ -39,7 +42,9 @@ SET(CMAKE_INSTALL_RPATH_USE_LINK_PATH FALSE)
 # extra compile options
 # target_compile_options(${SCALE_LRUCACHE_BENCH} PRIVATE -O3 -Wall -Wconversion -Wdouble-promotion -Weffc++ -Wextra -Wfloat-equal -Wformat=2 -Wno-error=unused-variable -Wnull-dereference -Wold-style-cast -Wpedantic -Wshadow -Wuninitialized -Wunreachable-code -Wredundant-move -Wpessimizing-move -Wthread-safety)
 
-target_compile_options(
-    cppactor PRIVATE
-    $<$<COMPILE_LANG_AND_ID:CXX,Clang,GNU>:-Werror=return-type>
-)
+
+
+# target_compile_options(
+#     cppactor PRIVATE
+#     $<$<COMPILE_LANG_AND_ID:CXX,Clang>:-Werror=return-type -fexperimental-library>
+# )
